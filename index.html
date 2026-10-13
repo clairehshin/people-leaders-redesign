@@ -3,243 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Workday for People Leaders (Redesign Mockup) | Working at Cornell</title>
+<title>Workday for People Leaders (Rearranged Mockup) | Working at Cornell</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <style>
   * { box-sizing: border-box; }
-  body { margin: 0; background: #eee; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
-  #wp { max-width: 900px; margin: 24px auto; background: #fff; color: #222; border: 1px solid #ccc; font-size: 15px; line-height: 1.6; }
+  body { margin: 0; background: #fff; }
+  #wp { max-width: 1000px; margin: 0 auto; background: #fff; color: #222; font-size: 15px; line-height: 1.65; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
   #wp .serif { font-family: Georgia, "Times New Roman", serif; }
-  #wp .lnk { color: #1F5E9E; text-decoration: underline; cursor: pointer; }
-  #wp .sec { padding: 1.5rem 2rem; border-top: 1px solid #e3e3e3; scroll-margin-top: 10px; }
-  #wp .sec h2 { font-family: Georgia, serif; color: #B31B1B; font-size: 26px; font-weight: 400; margin: 0 0 6px; display: flex; align-items: center; gap: 10px; }
-  #wp .sec h2 i { font-size: 22px; }
-  #wp .blurb { color: #444; margin: 0 0 10px; }
-  #wp .lbl { font-size: 12px; font-weight: 600; color: #666; letter-spacing: .03em; text-transform: uppercase; margin: 14px 0 6px; }
-  #wp .path { background: #f4f4f4; border-left: 3px solid #B31B1B; padding: 6px 12px; font-size: 14px; color: #333; margin-bottom: 4px; }
-  #wp .aids { display: flex; flex-wrap: wrap; gap: 8px; }
-  #wp .aid { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #c9d6e6; background: #f3f7fb; color: #1F5E9E; border-radius: 6px; padding: 4px 10px; font-size: 14px; cursor: pointer; }
-  #wp .aid:hover { background: #e6eef7; }
-  #wp details { border: 1px solid #e3e3e3; border-radius: 6px; margin-bottom: 6px; background: #fafafa; }
-  #wp summary { cursor: pointer; padding: 8px 12px; font-weight: 600; color: #8a1515; font-size: 14px; }
-  #wp details p, #wp details ol { margin: 0; padding: 0 14px 12px; color: #333; font-size: 14px; }
-  #wp details ol { padding-left: 34px; }
-  #wp .help { font-size: 13px; color: #666; margin-top: 14px; display: flex; justify-content: space-between; }
-  #wp .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 16px; }
-  #wp .tile { border: 1px solid #e0d4d4; background: #fff; border-radius: 8px; padding: 12px; cursor: pointer; text-align: left; display: flex; gap: 8px; align-items: center; color: #222; font-size: 14px; font-family: inherit; }
-  #wp .tile:hover { background: #fbf2f2; border-color: #B31B1B; }
-  #wp .tile i { color: #B31B1B; font-size: 22px; }
-  #wp .sub { font-family: Georgia, serif; font-size: 18px; margin: 12px 0 2px; color: #222; }
-  #wp .badge { background: #B31B1B; color: #fff; border-radius: 4px; padding: 1px 7px; font-size: 11px; font-family: sans-serif; }
-  #wp .hidden { display: none; }
+  #wp a, #wp .lnk { color: #1F5E9E; text-decoration: underline; cursor: pointer; }
+  #wp .main { padding: 0 2rem 2rem; max-width: 860px; }
+  #wp .sec { border-top: 1px solid #e3e3e3; padding-top: 20px; margin-top: 26px; scroll-margin-top: 10px; }
+  #wp h2.red { font-family: Georgia, serif; color: #B31B1B; font-size: 30px; font-weight: 400; margin: 0 0 12px; }
+  #wp h3 { font-family: Georgia, serif; font-size: 21px; font-weight: 400; margin: 18px 0 6px; color: #222; }
+  #wp p { margin: 0 0 12px; }
   #wp b { font-weight: 600; }
-  #q { width: 100%; padding: 9px 10px 9px 34px; font-size: 14px; border: 1px solid #bbb; border-radius: 6px; font-family: inherit; }
-  #q:focus { outline: 2px solid #B31B1B; outline-offset: 1px; }
-  @media (max-width: 640px) { #wp .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } #wp .sec { padding: 1.25rem; } }
+  #wp .aidbox { background: #f5f5f5; border: 1px solid #d6d6d6; padding: 14px 20px; margin: 16px 0; }
+  #wp .aidbox h4 { font-family: Georgia, serif; color: #B31B1B; font-size: 22px; font-weight: 400; margin: 0 0 8px; }
+  #wp .aidbox ul { margin: 0; padding-left: 20px; }
+  #wp .aidbox li { margin: 4px 0; }
+  #wp .faqh { font-family: Georgia, serif; font-size: 21px; margin: 18px 0 4px; }
+  #wp .exp { font-size: 12px; color: #888; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 8px; }
+  #wp details { margin-bottom: 8px; }
+  #wp summary { list-style: none; cursor: pointer; background: #f3f3f3; padding: 8px 12px; font-size: 14px; font-weight: 600; color: #9b1b1b; display: flex; gap: 10px; align-items: flex-start; }
+  #wp summary::-webkit-details-marker { display: none; }
+  #wp summary .bx { flex: none; width: 15px; height: 15px; border: 1px solid currentColor; border-radius: 3px; font-size: 13px; line-height: 13px; text-align: center; margin-top: 3px; font-weight: 400; }
+  #wp summary .bx::before { content: "+"; }
+  #wp details[open] summary { background: #e4eff6; color: #2f6390; }
+  #wp details[open] summary .bx::before { content: "\2212"; }
+  #wp .ans { border-left: 3px solid #e3e8ec; margin: 12px 0 8px 14px; padding: 0 0 0 20px; font-size: 14px; }
+  #wp .ans ol { margin: 6px 0; padding-left: 20px; }
+  #wp .side { background: #eef4f9; border: 1px solid #d6e2ec; padding: 16px 20px; flex: 0 0 270px; font-size: 14px; }
+  #wp .side ul { padding-left: 18px; margin: 10px 0 0; }
+  #wp .side li { margin: 7px 0; }
+  #wp .side a { font-weight: 700; }
+  #wp .toc { list-style: circle; padding-left: 22px; margin: 14px 0; }
+  #wp .toc li { margin: 6px 0; }
+  #wp .new { font-weight: 700; }
+  @media (max-width: 700px) { #wp .intro { flex-direction: column; } #wp .side { flex: none; width: 100%; } #wp .main { padding: 0 1.25rem 1.5rem; } }
 </style>
 </head>
 <body>
 <div id="wp">
-
-  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px 2rem">
-    <div class="serif" style="width:52px;height:52px;border-radius:50%;border:2px solid #B31B1B;color:#B31B1B;display:flex;align-items:center;justify-content:center;font-size:14px">CU</div>
-    <div class="serif" style="color:#B31B1B;font-size:32px">Working at Cornell</div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:10px 2rem 14px">
+    <div class="serif" style="width:80px;height:80px;border-radius:50%;border:2px solid #B31B1B;color:#B31B1B;display:flex;align-items:center;justify-content:center;font-size:15px;margin-top:4px">CU</div>
+    <div style="text-align:right">
+      <div style="font-size:12px;color:#444;display:flex;gap:16px;justify-content:flex-end;align-items:center"><span>Workday</span><span>Appreciation Portal</span><span>Pages For ▾</span><span style="background:#B31B1B;color:#fff;padding:4px 10px"><i class="ti ti-search"></i></span></div>
+      <div class="serif" style="color:#B31B1B;font-size:40px;margin-top:10px">Working at Cornell</div>
+    </div>
   </div>
-  <div style="background:#333;color:#fff;display:flex;justify-content:space-around;font-size:14px;padding:10px 0">
-    <span>Jobs</span><span>Understand Your Benefits</span><span>Self Service</span><span>Your Career</span><span>Culture</span><span>About</span>
-  </div>
+  <div style="background:#333;color:#fff;display:flex;justify-content:space-around;font-size:15px;padding:10px 0"><span>Jobs ▾</span><span>Understand Your Benefits ▾</span><span>Self Service ▾</span><span>Your Career ▾</span><span>Culture ▾</span><span>About ▾</span></div>
 
-  <div id="top" style="padding:1.25rem 2rem 1.5rem">
-    <div style="font-size:13px;margin-bottom:12px"><span class="lnk">Home</span> › <span class="lnk">Self Service</span> › Workday for People Leaders</div>
-    <h1 class="serif" style="font-size:34px;font-weight:400;margin:0 0 8px;color:#222">Workday for People Leaders</h1>
-    <p style="color:#555;margin:0 0 16px">If anyone reports to you, you have the Workday "Manager" role, whatever your title. Most of your tasks start in the <b>My Team Management</b> app, found under <b>Menu</b> on your Workday <b>Home</b> page.</p>
+  <div class="main">
+    <div style="font-size:13px;padding:20px 0 12px;border-bottom:1px solid #e3e3e3"><span class="lnk">Home</span> › <span class="lnk">Self Service</span> ›</div>
+    <h1 class="serif" style="font-size:34px;font-weight:400;margin:22px 0 14px">Workday for People Leaders</h1>
 
-    <div style="background:#fdf6e3;border:1px solid #ecd9a3;border-radius:6px;padding:8px 12px;font-size:14px;margin-bottom:16px;display:flex;gap:8px;align-items:center">
-      <span class="badge">New</span><span>9/28/26: <span class="lnk" data-go="probation">How to manage probationary periods</span></span>
+    <div class="intro" style="display:flex;gap:24px;align-items:flex-start">
+      <div style="flex:1;min-width:0">
+        <p style="color:#555;font-size:18px">Anyone who has employees reporting to them will have the Workday role "Manager," regardless of your specific title at Cornell.</p>
+        <ul class="toc">
+          <li><span class="lnk" data-go="inbox">Inbox</span></li>
+          <li><span class="lnk" data-go="hub">Manager Insights Hub</span></li>
+          <li><span class="lnk" data-go="time">Time Management</span></li>
+          <li><span class="lnk" data-go="emp">Employee Information</span></li>
+          <li><span class="lnk" data-go="perf">Performance Management</span></li>
+          <li><span class="lnk" data-go="rep">Reports</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <b>Also see Workday Job Aids for:</b>
+        <ul><li><a>Employees</a></li><li><a>HR Partners</a></li><li><a>Additional Power Users</a></li><li><a>Hiring &amp; Managing Student Workers</a></li><li><a>For Student Workers</a></li><li><a>Sponsors for Workday Learning</a></li></ul>
+      </div>
     </div>
 
-    <div class="lbl" style="margin-top:0">What do you need to do?</div>
-    <div class="tiles">
-      <button class="tile" data-go="time"><i class="ti ti-clock-check"></i>Approve time</button>
-      <button class="tile" data-go="time"><i class="ti ti-beach"></i>Approve time off</button>
-      <button class="tile" data-go="delegate"><i class="ti ti-arrows-exchange"></i>Delegate approvals</button>
-      <button class="tile" data-go="team"><i class="ti ti-users"></i>View my team</button>
-      <button class="tile" data-go="perf"><i class="ti ti-target-arrow"></i>Reviews and goals</button>
-      <button class="tile" data-go="reports"><i class="ti ti-report-analytics"></i>Run a report</button>
+    <p style="margin-top:14px">With Workday's manager self-service, people leaders are empowered with necessary and relevant job, position, compensation, labor distribution (called costing data in Workday), performance reviews, goals, recruiting and time and attendance information. This includes access to numerous Workday reports with information about your team to support all HR-related decisions. In addition, you will be required to <a>approve Time Entry</a> (timesheets for hourly employees only) and Time Off Requests, which will be routed to you in your inbox.</p>
+
+    <div class="aidbox">
+      <h4>Workday Job Aids for People Leaders</h4>
+      <ul><li><span class="new">New</span> (9/28/26) <a>How to Manage Probationary Periods</a></li><li><a>Workday for Managers Guide</a></li></ul>
     </div>
 
-    <div style="position:relative">
-      <i class="ti ti-search" style="position:absolute;left:11px;top:11px;color:#888"></i>
-      <input id="q" type="text" placeholder="Search this page, like send back or compensation">
+    <div class="sec" id="inbox">
+      <h2 class="red">Inbox</h2>
+      <p>Your Inbox will show notifications of tasks related to you or your employees and items that have been routed to you for approval, such as Hourly Time Entry and Time Off requests.</p>
     </div>
-    <div id="qmsg" style="font-size:13px;color:#666;margin-top:4px"></div>
-  </div>
 
-  <div class="sec" id="nav">
-    <h2><i class="ti ti-compass"></i>Getting around Workday</h2>
-    <p class="blurb">Where your manager tasks and team information live.</p>
-    <div class="sub">Inbox</div>
-    <p class="blurb">Tasks routed to you for approval, like hourly time entry, time off requests, and manager evaluations.</p>
-    <div class="sub">My Team Management app</div>
-    <p class="blurb">Views of your direct reports, plus manager reports. Select a name or photo to see that person's details.</p>
-    <div class="sub">Manager Insights Hub</div>
-    <p class="blurb">One place for team tasks, reports, and suggestions for your team's connections, mentors, gigs, and learning.</p>
-    <div class="lbl">Where to find it</div>
-    <div class="path">Home → Menu → My Team Management</div>
-    <div class="path">Global Navigation Menu → Manager Insights Hub</div>
-    <div class="lbl">Job aids</div>
-    <div class="aids">
-      <span class="aid"><i class="ti ti-file-text"></i>Workday for managers guide</span>
-      <span class="aid"><i class="ti ti-file-text"></i>Workday Manager: How to Navigate</span>
+    <div class="sec" id="hub">
+      <h2 class="red">Manager Insights Hub</h2>
+      <p>The Manager Insights Hub consolidates various tasks, reports, and insights about your team into one central location, streamlining the ability of people leaders to support their teams. People leaders have quick access to important tasks, reports, and personalized team member recommendations, such as connections, mentors, gigs, and learning opportunities. The Manager Insights Hub is available in your Global Navigation Menu.</p>
     </div>
-    <div class="lbl">FAQs</div>
-    <details><summary>How can I see more detailed information about each of my direct reports?</summary>
-      <p>Open the <b>My Team Management</b> app from <b>Menu</b> on your <b>Home</b> page. Select an employee's name or photo to see more about that person.</p></details>
-    <div class="help"><span>Questions? <span class="lnk">Find your HR rep</span></span><span class="lnk" data-go="top">Back to top ↑</span></div>
-  </div>
 
-  <div class="sec" id="time">
-    <h2><i class="ti ti-clock"></i>Time and time off</h2>
-    <p class="blurb">Approve hourly timesheets and time off requests, and check your team's balances.</p>
-    <div class="sub">Approve time worked</div>
-    <p class="blurb">Approve time for several employees, including students, for the two-week pay period, or approve one employee's week from your Inbox. We recommend approving weekly.</p>
-    <div class="sub">Approve time off</div>
-    <p class="blurb">Time off requests arrive in your Inbox for review.</p>
-    <div class="sub">View time off balances</div>
-    <p class="blurb">Run the Time Off Balances by Supervisory Organization report.</p>
-    <div class="lbl">Where to find it</div>
-    <div class="path">Inbox</div>
-    <div class="path">My Team Management → Manager Reports by Category → Time Off Balances by Supervisory Organization</div>
-    <div class="lbl">Job aids</div>
-    <div class="aids">
-      <span class="aid"><i class="ti ti-file-text"></i>How to approve time worked</span>
-      <span class="aid"><i class="ti ti-file-text"></i>How to manage time off (absences)</span>
+    <div class="sec" id="time">
+      <h2 class="red">Time Management</h2>
+      <h3>Approving Time Worked</h3>
+      <p>Managers can use the My Team Management dashboard to approve submitted timeblocks for multiple employees (including students) within the two-week pay period. The Workday Inbox can be used by managers for submitted time of an employee within a specific week. <b>Note:</b> We recommend reviewing and approving time on a weekly basis. To learn about the specific steps to approve time, please see the <a>Approving Time</a> job aid.</p>
+      <h3>Viewing Time Off</h3>
+      <p>Workday is the system to record and track time off balances for both hourly and salaried employees. To view your employees' time off balance, click on the <b>Team Time Off</b> worklet. There are various options, including a Time Off Leave and Calendar view. To see current balances you may wish to select the <b>Time Off Summary</b> view from that page.</p>
+      <h3>Approving Time Off</h3>
+      <p>Time Off Requests will appear in your Inbox for review and approval. To learn about the specific steps to approve time, please see the <a>Approving Time Off</a> job aid.</p>
+      <h3>Delegating Approval of Time Off</h3>
+      <p>Delegation is used to allow another employee to review and approve on your behalf. As a manager, you may wish to delegate your Time Entry and Time Off approval responsibilities to another. This can be done for short periods of time or on an on-going basis. In addition, an entire inbox can be delegated to another individual during a leave or vacation. Please see the <a>Delegate Quick Reference guide</a> to walk you through the necessary steps.</p>
+      <div class="aidbox"><h4>Job Aids</h4><ul><li><a>How To Approve Time Worked in Time Tracking</a></li><li><a>How To Manage Time Off (Absences)</a></li><li><a>How To Delegate Approvals Quick Reference guide</a></li></ul></div>
+      <div class="faqgrp"><div class="faqh">Select FAQs</div><div class="exp"><i class="ti ti-list"></i><span>Expand all</span></div>
+        <details><summary><span class="bx"></span>How can I view Time Off balances for my employees?</summary><div class="ans">To view your employees' time off balance, click on the <b>Team Management app</b>, Performance within <b>Manager Reports by Categories</b>, then select the <b>Time Off Balances by Supervisory Organization</b> report.</div></details>
+        <details><summary><span class="bx"></span>How do I approve Time Off Requests?</summary><div class="ans">Time Off Requests will appear in your Inbox for review and approval. To learn about the specific steps to approve time, please see the <a>Approving Time Off</a> job aid.</div></details>
+        <details><summary><span class="bx"></span>What is delegation and how may it be used?</summary><div class="ans">Delegation is used to allow another employee to review and approve on your behalf. As a manager, you may wish to delegate your Time Entry and Time Off approval responsibilities to another. This can be done for short periods of time or on an on-going basis. In addition, an entire inbox can be delegated to another individual during a leave or vacation. Please see the <a>Delegate Quick Reference guide</a> to walk you through the necessary steps.</div></details>
+      </div>
     </div>
-    <div class="lbl">FAQs</div>
-    <details><summary>How can I view time off balances for my employees?</summary>
-      <p>In the <b>My Team Management</b> app, open <b>Manager Reports by Category</b> and run the <b>Time Off Balances by Supervisory Organization</b> report.</p></details>
-    <details><summary>How do I approve time off requests?</summary>
-      <p>Time off requests appear in your <b>Inbox</b> for review and approval. For step-by-step screens, see the <span class="lnk">How to manage time off</span> job aid.</p></details>
-    <div class="help"><span>Questions? <span class="lnk">Find your HR rep</span></span><span class="lnk" data-go="top">Back to top ↑</span></div>
-  </div>
 
-  <div class="sec" id="delegate">
-    <h2><i class="ti ti-arrows-exchange"></i>Delegating approvals</h2>
-    <p class="blurb">Let another employee approve time entry and time off for you, for a short time or ongoing. You can also hand over your entire Inbox during a leave or vacation.</p>
-    <div class="lbl">Job aids</div>
-    <div class="aids"><span class="aid"><i class="ti ti-file-text"></i>Delegate approvals quick reference guide</span></div>
-    <div class="lbl">FAQs</div>
-    <details><summary>What is delegation and how can I use it?</summary>
-      <p>Delegation lets another employee review and approve on your behalf. You can delegate time entry and time off approvals, or your whole Inbox, for a short period or on an ongoing basis. The <span class="lnk">Delegate approvals quick reference guide</span> walks you through the steps.</p></details>
-    <div class="help"><span>Questions? <span class="lnk">Find your HR rep</span></span><span class="lnk" data-go="top">Back to top ↑</span></div>
-  </div>
+    <div class="sec" id="emp">
+      <h2 class="red">Employee Information</h2>
+      <p>Click on the <b>My Team</b> icon on your <b>Home</b> page. The My Team page is composed of windows that provide different views into your direct reports. Click on the link with their name and photo of each employee to view more details about that individual.</p>
+      <h3>Job changes</h3>
+      <p>To examine a specific employee's history, click on the <b>Timeline</b> option with the My Team icon on the homepage. This view contains a historical record of all the changes made to a worker, including changes to their job, position, compensation, etc. It is arranged by date.</p>
+      <h3>Compensation</h3>
+      <p>To examine a specific employee's compensation, click on the hyperlink with employee's name (either from the <b>My Team</b> worklet or wherever their name is visible) and then click on their Compensation tab. Any questions about compensation should be directed to your local Human Resource Office.</p>
+      <div class="faqgrp"><div class="faqh">Select FAQs</div><div class="exp"><i class="ti ti-list"></i><span>Expand all</span></div>
+        <details><summary><span class="bx"></span>How can I view more detailed information about each of my direct reports?</summary><div class="ans">Click on the <b>My Team Management</b> app from the <b>Menu</b> option on the <b>Home</b> page. This app will provide different views into your direct reports. Click on the link with their name and photo of each employee to view more details about that individual.</div></details>
+        <details><summary><span class="bx"></span>How can I see what HR changes have occurred to my employee?</summary><div class="ans">To examine a specific employee's compensation, click on the employee's name from the <b>My Team Management app,</b> then click on the <b>Worker History</b> tab (may be visible via the More option). This view contains a historical record of all the changes made to a worker, including changes to their job, position, compensation, etc. It is arranged by date.</div></details>
+        <details><summary><span class="bx"></span>How can I view Compensation information for my employees?</summary><div class="ans">To examine a specific employee's compensation, click on the employee's name from the <b>My Team Management app,</b> then click on their <b>Compensation</b> tab.</div></details>
+      </div>
+    </div>
 
-  <div class="sec" id="team">
-    <h2><i class="ti ti-users"></i>Your team's information</h2>
-    <p class="blurb">See job history and compensation for your direct reports.</p>
-    <div class="sub">Job changes</div>
-    <p class="blurb">The Worker History tab lists every change to a worker's job, position, and pay, by date.</p>
-    <div class="sub">Compensation</div>
-    <p class="blurb">The Compensation tab shows current pay. Send pay questions to your local HR office.</p>
-    <div class="lbl">Where to find it</div>
-    <div class="path">My Team Management → employee name → Worker History tab (may be under More)</div>
-    <div class="path">My Team Management → employee name → Compensation tab</div>
-    <div class="lbl">FAQs</div>
-    <details><summary>How can I see what HR changes have happened for my employee?</summary>
-      <p>Select the employee's name in the <b>My Team Management</b> app, then the <b>Worker History</b> tab (it may be under <b>More</b>). It shows all changes to their job, position, and compensation, by date.</p></details>
-    <details><summary>How can I view compensation for my employees?</summary>
-      <p>Select the employee's name in the <b>My Team Management</b> app, then the <b>Compensation</b> tab.</p></details>
-    <div class="help"><span>Questions? <span class="lnk">Find your HR rep</span></span><span class="lnk" data-go="top">Back to top ↑</span></div>
-  </div>
+    <div class="sec" id="perf">
+      <h2 class="red">Performance Management</h2>
+      <p>The performance management process, including Performance Dialogues is completed in Workday. For details, visit the <a>Performance Management section</a> of this site.</p>
+      <h3>Goals</h3>
+      <p>To create a goal for your team click on the <b>Performance</b> icon. Under Action click on the <b>Add Goal to Employees</b> button and proceed to fill in the name of the employee or group of employees you want to cascade the goal to as well as enter all of the other goal related fields.</p>
+      <div class="faqgrp"><div class="faqh">Select FAQs</div><div class="exp"><i class="ti ti-list"></i><span>Expand all</span></div>
+        <details><summary><span class="bx"></span>How do Performance Reviews work?</summary><div class="ans">When your team member has submitted their <b>Self-Evaluation</b>, you will receive a Manager Evaluation item in your Workday <b>Inbox</b>. You may also click on the <b>Team Performance</b> icon on your home page and click under View, <b>My Team's Performance Reviews</b>. This report will show you the current status of each of your direct reports. If the current step states <b>Complete Manager Evaluation,</b> you may click on that employee's performance review link to begin your evaluation.</div></details>
+        <details><summary><span class="bx"></span>Can I complete my Evaluation in advance of the employee completing their Self-Evaluation?</summary><div class="ans">Employees begin the Performance Review process by answering the questions in the <b>Self-Evaluation</b> portion of Workday. Only you can view your responses while the <b>Self- Evaluation</b> is in progress. As such, it will be important to communicate deadlines so you have sufficient time to complete <b>Evaluations</b> for your direct reports.</div></details>
+        <details><summary><span class="bx"></span>How can I SEND BACK a review to an employee?</summary><div class="ans">If an employee needs to make further revisions after they clicked on <b>Submit</b> button, you can "<b>Send Back</b>" their review, as needed. Within the <b>Team Management</b> app, in the <b>Manager Reports by Category</b> section, select <b>Performance</b> and then <b>My Team's Performance Reviews</b>. Locate the correct review in the Performance Review column and click on the and then select <b>Business Process &gt; Manual Send Back</b>.</div></details>
+        <details><summary><span class="bx"></span>How can my manager view my direct reports' reviews?</summary><div class="ans">Your manager is still able to view your direct reports' reviews, however, it is not a step in the formal performance review process. Instead, they may generate a report <b>Employee Review by Supervisory Organization.</b><ol><li>Type the name of the report in the search box.</li><li>Select the organization by typing in the manager's name.</li><li>To see all the employees' reviews for the whole organization, click on the Include Subordinate Organizations box.</li></ol></div></details>
+        <details><summary><span class="bx"></span>What is the difference between the Personal Goals, Goal Details, and Organizational Goals tabs?</summary><div class="ans">The Personal Goals tab shows goals that you create for yourself, and that your leader creates for you. The Goal Details tab contains all of the basic goal information from the Personal Goals tab in a table-style view. The Organization Goals tab is where goals that are set at the College or Unit level would be viewed.</div></details>
+        <details><summary><span class="bx"></span>What is the difference between deleting a goal and marking its status as "On Hold"?</summary><div class="ans">When handling a goal that may not be used during a given year there are two options, one is to <b>Remove</b> the goal. Doing this would <b>permanently</b> delete the goal from Workday (with no way to recover this information). Another option is to change that goal's Status to <b>On Hold</b>. This moves the goal to the bottom of your Personal Goals profile tab where it can be updated in the future.</div></details>
+      </div>
+    </div>
 
-  <div class="sec" id="probation">
-    <h2><i class="ti ti-hourglass"></i>Probationary periods <span class="badge">New</span></h2>
-    <p class="blurb">Track and complete probationary periods for new team members. [Short description to confirm with HR]</p>
-    <div class="lbl">Job aids</div>
-    <div class="aids"><span class="aid"><i class="ti ti-file-text"></i>How to manage probationary periods</span></div>
-    <div class="help"><span>Questions? <span class="lnk">Find your HR rep</span></span><span class="lnk" data-go="top">Back to top ↑</span></div>
-  </div>
-
-  <div class="sec" id="perf">
-    <h2><i class="ti ti-target-arrow"></i>Performance and goals</h2>
-    <p class="blurb">Performance reviews, including Performance Dialogues, and team goals are completed in Workday.</p>
-    <div class="sub">Performance reviews</div>
-    <p class="blurb">After an employee submits their self-evaluation, a Manager Evaluation task appears in your Inbox.</p>
-    <div class="sub">Goals</div>
-    <p class="blurb">Add a goal for one person or a group, then fill in the goal details.</p>
-    <div class="lbl">Where to find it</div>
-    <div class="path">My Team Management → Manager Reports by Category → Performance → My Team's Performance Reviews</div>
-    <div class="path">Performance → Actions → Add Goal to Employees</div>
-    <div class="lbl">Job aids</div>
-    <div class="aids"><span class="aid"><i class="ti ti-external-link"></i>Performance Management on Working at Cornell</span></div>
-    <div class="lbl">FAQs: reviews</div>
-    <details><summary>How do performance reviews work?</summary>
-      <p>When your team member submits their <b>Self-Evaluation</b>, you'll get a Manager Evaluation item in your <b>Inbox</b>. You can also open <b>My Team's Performance Reviews</b> to see where each direct report is in the process. If the current step says <b>Complete Manager Evaluation</b>, select that employee's review to begin.</p></details>
-    <details><summary>Can I complete my evaluation before the employee finishes their self-evaluation?</summary>
-      <p>Employees start the process by answering the <b>Self-Evaluation</b> questions, and only they can see their responses while it's in progress. Share deadlines with your team so you have enough time to complete <b>Evaluations</b> for your direct reports.</p></details>
-    <details><summary>How can I send a review back to an employee?</summary>
-      <p>If an employee needs to revise after selecting <b>Submit</b>, you can send it back. In the <b>My Team Management</b> app, go to <b>Manager Reports by Category</b> → <b>Performance</b> → <b>My Team's Performance Reviews</b>. Find the review, open its actions menu, and select <b>Business Process</b> → <b>Manual Send Back</b>.</p></details>
-    <details><summary>How can my manager view my direct reports' reviews?</summary>
-      <p>Your manager isn't part of the formal review steps, but can run the <b>Employee Review by Supervisory Organization</b> report:</p>
-      <ol>
-        <li>Type the report name in the Workday search box.</li>
-        <li>Select the organization by typing in the manager's name.</li>
-        <li>To see reviews for the whole organization, check <b>Include Subordinate Organizations</b>.</li>
-      </ol></details>
-    <div class="lbl">FAQs: goals</div>
-    <details><summary>What's the difference between the Personal Goals, Goal Details, and Organizational Goals tabs?</summary>
-      <p><b>Personal Goals</b> shows goals you create for yourself and goals your leader creates for you. <b>Goal Details</b> shows the same goals in a table view. <b>Organizational Goals</b> shows goals set at the college or unit level.</p></details>
-    <details><summary>What's the difference between deleting a goal and marking it "On Hold"?</summary>
-      <p><b>Remove</b> permanently deletes the goal from Workday, and it can't be recovered. Changing the status to <b>On Hold</b> moves the goal to the bottom of the Personal Goals tab, where you can update it later.</p></details>
-    <div class="help"><span>Questions? <span class="lnk">Find your HR rep</span></span><span class="lnk" data-go="top">Back to top ↑</span></div>
-  </div>
-
-  <div class="sec" id="reports">
-    <h2><i class="ti ti-report-analytics"></i>Reports</h2>
-    <p class="blurb">Find the most useful manager reports about your team in two places in the My Team Management app.</p>
-    <div class="lbl">Where to find it</div>
-    <div class="path">My Team Management → Manager Reports by Category</div>
-    <div class="path">My Team Management → Top 5 Reports for Managers</div>
-    <div class="lbl">Job aids</div>
-    <div class="aids"><span class="aid"><i class="ti ti-file-text"></i>Workday Manager: How to Navigate</span></div>
-    <div class="lbl">FAQs</div>
-    <details><summary>What reports are available to me?</summary>
-      <p>In the <b>My Team Management</b> app, <b>Manager Reports by Category</b> and <b>Top 5 Reports for Managers</b> give you access to the top manager reports. The <span class="lnk">Workday Manager: How to Navigate</span> guide explains which reports may be most useful.</p></details>
-    <div class="help"><span>Questions? <span class="lnk">Find your HR rep</span></span><span class="lnk" data-go="top">Back to top ↑</span></div>
-  </div>
-
-  <div class="sec" style="background:#f6f6f6">
-    <h2 style="font-size:20px"><i class="ti ti-books"></i>Job aids for other roles</h2>
-    <div class="aids">
-      <span class="aid">Employees</span><span class="aid">HR partners</span><span class="aid">Additional power users</span>
-      <span class="aid">Hiring student workers</span><span class="aid">Student workers</span><span class="aid">Workday Learning sponsors</span>
+    <div class="sec" id="rep">
+      <h2 class="red">Reports</h2>
+      <p>The <b>Custom Reports by Category</b> worklet shows you categories of reports and tasks, to give you an idea of what is available in Workday. Please review the <a>Workday Manager: How to Navigate</a> guide to learn more about specific reports that may be valuable to you.</p>
+      <div class="aidbox"><h4>Job Aids</h4><ul><li><a>Workday Manager: How to Navigate</a></li></ul></div>
+      <div class="faqgrp"><div class="faqh">Select FAQs</div><div class="exp"><i class="ti ti-list"></i><span>Expand all</span></div>
+        <details><summary><span class="bx"></span>What reports are available to me?</summary><div class="ans">Within the <b>My Team Management</b> app, available from the <b>Menu</b> option on the <b>Home,</b> there are two sections, <b>Manager Reports by Categories</b> and <b>Top 5 Reports for Managers</b>, that will give you access to top manager reports available in Workday. Please review the <a>Workday Manager: How to Navigate</a> guide to learn more about specific reports that may be valuable to you.</div></details>
+      </div>
     </div>
   </div>
 
-  <div style="background:#333;color:#ddd;font-size:13px;padding:16px 2rem;display:flex;justify-content:space-between;align-items:center">
-    <span class="serif" style="color:#fff;font-size:20px">Working at Cornell</span>
-    <span>Find your HR rep · Contact us · Workday</span>
+  <div style="background:#333;color:#ddd;font-size:13px;padding:24px 2rem;display:flex;justify-content:space-between;align-items:center;gap:20px">
+    <div><div class="serif" style="color:#fff;font-size:26px">Working at Cornell</div><div>Cornell University</div></div>
+    <div style="text-align:right">Careers at Cornell · Equal Education &amp; Employment · Find your HR Rep · Workday</div>
   </div>
 </div>
-
 <script>
   const wp = document.getElementById('wp');
   wp.querySelectorAll('[data-go]').forEach(el => el.addEventListener('click', () => {
-    const t = document.getElementById(el.dataset.go);
-    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById(el.dataset.go).scrollIntoView({ behavior: 'smooth', block: 'start' });
   }));
-  const secs = [...wp.querySelectorAll('.sec')].filter(s => s.id);
-  const q = document.getElementById('q'), msg = document.getElementById('qmsg');
-  q.addEventListener('input', () => {
-    const v = q.value.trim().toLowerCase();
-    let n = 0;
-    secs.forEach(s => {
-      const hit = !v || s.textContent.toLowerCase().includes(v);
-      s.classList.toggle('hidden', !hit);
-      if (hit) n++;
-      s.querySelectorAll('details').forEach(d => { d.open = !!v && d.textContent.toLowerCase().includes(v); });
+  wp.querySelectorAll('.faqgrp').forEach(g => {
+    const b = g.querySelector('.exp'), t = b.querySelector('span');
+    b.addEventListener('click', () => {
+      const open = t.textContent === 'Expand all';
+      g.querySelectorAll('details').forEach(d => d.open = open);
+      t.textContent = open ? 'Close all' : 'Expand all';
     });
-    msg.textContent = v ? (n ? n + ' section' + (n > 1 ? 's' : '') + ' match' : 'No matches. Try another word.') : '';
   });
 </script>
 </body>
